@@ -4,10 +4,10 @@ use Illuminate\Support\ServiceProvider;
 
 class InterfaceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../resources/assets' => public_path('assets'),
+            __DIR__ . '/../resources/public' => public_path(),
         ], 'interface');
     }
 
