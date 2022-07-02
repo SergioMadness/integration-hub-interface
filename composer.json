@@ -18,7 +18,8 @@
     "laravel/framework": "5.8.*",
     "professionalweb/lms-interface-common": "dev-develop",
     "professionalweb/lms-saas": "dev-develop",
-    "professionalweb/lms-saas-interface": "dev-develop"
+    "professionalweb/lms-saas-interface": "dev-develop",
+    "professionalweb/integration-hub-common": "dev-develop"
   },
   "require-dev": {},
   "autoload": {
