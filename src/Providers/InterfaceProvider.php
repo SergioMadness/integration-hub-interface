@@ -8,7 +8,7 @@ class InterfaceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../resources/assets/public' => public_path(),
+            __DIR__ . '/../resources/assets' => public_path() . '/professionalweb/integration-hub-interface',
         ], 'integration-hub-interface');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'InterfaceHub');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'InterfaceHub');

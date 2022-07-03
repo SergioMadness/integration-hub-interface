@@ -7,7 +7,7 @@
         <div class="alert alert-info"
              role="alert">@lang('InterfaceCommon::common.list.no-items-create-link', ['link'=>route('InterfaceHub::flow.add')])</div>
     @else
-        <a href="{{ route('InterfaceHub::flow.add') }}"
+        <a href="{{ route('InterfaceHub::flow.edit') }}"
            class="btn btn-primary">@lang('InterfaceCommon::common.add')</a>
         <br>
         <br>

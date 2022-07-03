@@ -49,7 +49,7 @@ class FlowController extends Controller
             return redirect()->route('InterfaceHub::flow.edit', ['id' => $model->id]);
         }
 
-        return view('InterfaceHub::flow.edit', ['model' => $getFlow->setId($id)->run()]);
+        return view('InterfaceHub::flow.edit', ['model' => $id !== null ? $getFlow->setId($id)->run() : new Flow()]);
     }
 
     /**
