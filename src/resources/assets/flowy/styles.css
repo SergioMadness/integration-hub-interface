@@ -1,3 +1,7 @@
+.arrowblock {
+    width: auto
+}
+
 #back {
     width: 40px;
     height: 40px;
@@ -20,7 +24,6 @@
 }
 
 #title {
-    font-family: Roboto;
     font-weight: 500;
     font-size: 16px;
     color: #393C44;
@@ -28,7 +31,6 @@
 }
 
 #subtitle {
-    font-family: Roboto;
     color: #808292;
     font-size: 14px;
     margin-top: 5px;
@@ -55,7 +57,7 @@
     height: 39px;
     line-height: 39px;
     border-radius: 5px 0px 0px 5px;
-    font-family: Roboto;
+
     color: #393C44;
     display: inline-block;
     font-size: 14px;
@@ -63,7 +65,7 @@
 }
 
 #rightswitch {
-    font-family: Roboto;
+
     color: #808292;
     border-radius: 0px 5px 5px 0px;
     border: 1px solid #E8E8EF;
@@ -77,7 +79,7 @@
 }
 
 #discard {
-    font-family: Roboto;
+
     font-weight: 500;
     font-size: 14px;
     color: #A6A6B3;
@@ -98,7 +100,7 @@
 }
 
 #publish {
-    font-family: Roboto;
+
     font-weight: 500;
     font-size: 14px;
     color: #FFF;
@@ -146,7 +148,7 @@
     box-shadow: 0px 2px 8px rgba(34, 34, 87, 0.05);
     border-radius: 5px;
     text-indent: 35px;
-    font-family: Roboto;
+
     font-size: 16px;
 }
 
@@ -171,7 +173,7 @@
 
 #header {
     font-size: 20px;
-    font-family: Roboto;
+
     font-weight: bold;
     color: #393C44;
 }
@@ -198,7 +200,7 @@
 
 #triggers {
     margin-left: 20px;
-    font-family: Roboto;
+
     font-weight: 500;
     font-size: 14px;
     text-align: center;
@@ -221,7 +223,7 @@
 
 #actions {
     display: inline-block;
-    font-family: Roboto;
+
     font-weight: 500;
     color: #808292;
     font-size: 14px;
@@ -235,7 +237,7 @@
 #loggers {
     width: calc(88% / 3);
     display: inline-block;
-    font-family: Roboto;
+
     font-weight: 500;
     color: #808292;
     font-size: 14px;
@@ -255,7 +257,7 @@
     height: 67px;
     box-sizing: border-box;
     background-color: #FFF;
-    font-family: Roboto;
+
     font-size: 14px;
 }
 
@@ -324,10 +326,11 @@
 }
 
 #proplist {
-    height: calc(100% - 305px);
+    /*height: calc(100% - 305px);*/
     overflow: auto;
     margin-top: -30px;
     padding-top: 30px;
+    width: 100%
 }
 
 .blockin {
@@ -369,7 +372,7 @@
 .blocktitle {
     margin: 0px !important;
     padding: 0px !important;
-    font-family: Roboto;
+
     font-weight: 500;
     font-size: 16px;
     color: #393C44;
@@ -377,7 +380,7 @@
 
 .blockdesc {
     margin-top: 5px;
-    font-family: Roboto;
+
     color: #808292;
     font-size: 14px;
     line-height: 21px;
@@ -423,22 +426,22 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 311px;
+    width: 800px;
     height: 100%;
     padding-left: 20px;
     overflow: hidden;
     z-index: -2;
+    border: 1px solid #E8E8EF;
 }
 
 #properties {
     position: absolute;
     height: 100%;
-    width: 311px;
+    width: 800px;
     background-color: #FFF;
     right: -150;
     opacity: 0;
     z-index: 2;
-    top: 15px;
     box-shadow: -4px 0px 40px rgba(26, 26, 73, 0);
     padding-left: 20px;
     transition: all .25s cubic-bezier(.05, .03, .35, 1);
@@ -457,7 +460,7 @@
 
 #header2 {
     font-size: 20px;
-    font-family: Roboto;
+
     font-weight: bold;
     color: #393C44;
     margin-top: 5px;
@@ -485,7 +488,7 @@
 }
 
 #dataprop {
-    font-family: Roboto;
+    cursor: pointer;
     font-weight: 500;
     font-size: 14px;
     text-align: center;
@@ -498,7 +501,7 @@
     margin-left: 20px;
 }
 
-#dataprop:after {
+.active:after {
     display: block;
     content: "";
     width: 100%;
@@ -509,7 +512,7 @@
 
 #alertprop {
     display: inline-block;
-    font-family: Roboto;
+
     font-weight: 500;
     color: #808292;
     font-size: 14px;
@@ -523,7 +526,7 @@
 #logsprop {
     width: calc(88% / 3);
     display: inline-block;
-    font-family: Roboto;
+
     font-weight: 500;
     color: #808292;
     font-size: 14px;
@@ -533,7 +536,7 @@
 }
 
 .inputlabel {
-    font-family: Roboto;
+
     font-size: 14px;
     color: #253134;
 }
@@ -543,7 +546,7 @@
     border-radius: 5px;
     border: 1px solid #E8E8EF;
     box-shadow: 0px 2px 8px rgba(34, 34, 87, 0.05);
-    font-family: Roboto;
+
     font-size: 14px;
     color: #253134;
     text-indent: 20px;
@@ -570,7 +573,7 @@
 
 .checkus p {
     display: inline-block;
-    font-family: Roboto;
+
     font-size: 14px;
     vertical-align: middle;
     margin-left: 10px;
@@ -589,7 +592,7 @@
     border-radius: 5px;
     position: absolute;
     bottom: 20;
-    font-family: Roboto;
+
     font-size: 14px;
     text-align: center;
     width: 287px;
@@ -617,7 +620,7 @@
 }
 
 .blockyname {
-    font-family: Roboto;
+
     font-weight: 500;
     color: #253134;
     display: inline-block;
@@ -667,7 +670,7 @@
 }
 
 .blockyinfo {
-    font-family: Roboto;
+
     font-size: 14px;
     color: #808292;
     margin-top: 15px;
@@ -705,4 +708,8 @@
     #names {
         display: none;
     }
+}
+
+.conditionsBlock {
+    height: 300px
 }

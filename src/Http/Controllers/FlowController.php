@@ -6,6 +6,7 @@ use Illuminate\Http\RedirectResponse;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Models\Flow;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Actions\Flow\GetFlow;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Actions\Flow\StoreFlow;
+use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Services\SubsystemPool;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Actions\Flow\DeleteFlow;
 use professionalweb\IntegrationHub\IntegrationHubCommon\Interfaces\Actions\Flow\GetFlowList;
 
@@ -33,14 +34,15 @@ class FlowController extends Controller
     /**
      * Method to create or update flow
      *
-     * @param Request     $request
-     * @param GetFlow     $getFlow
-     * @param StoreFlow   $storeAction
-     * @param string|null $id
+     * @param Request       $request
+     * @param GetFlow       $getFlow
+     * @param StoreFlow     $storeAction
+     * @param SubsystemPool $subsystemPool
+     * @param string|null   $id
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function edit(Request $request, GetFlow $getFlow, StoreFlow $storeAction, ?string $id = null)
+    public function edit(Request $request, GetFlow $getFlow, StoreFlow $storeAction, SubsystemPool $subsystemPool, ?string $id = null)
     {
         if ($request->isMethod('post')) {
             /** @var Flow $model */
@@ -49,7 +51,12 @@ class FlowController extends Controller
             return redirect()->route('InterfaceHub::flow.edit', ['id' => $model->id]);
         }
 
-        return view('InterfaceHub::flow.edit', ['model' => $id !== null ? $getFlow->setId($id)->run() : new Flow()]);
+        $availableModules = $subsystemPool->getAll();
+
+        return view('InterfaceHub::flow.edit', [
+            'model'            => $id !== null ? $getFlow->setId($id)->run() : new Flow(),
+            'availableModules' => $availableModules,
+        ]);
     }
 
     /**
